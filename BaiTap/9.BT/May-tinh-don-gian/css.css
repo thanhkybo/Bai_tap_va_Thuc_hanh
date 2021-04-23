@@ -1,0 +1,15 @@
+button {
+    width: 100%;
+    color: blue;
+    font-weight: bold;
+}
+table {
+    width: 200px;
+    border: 4px solid black;
+}
+body {
+    background-color: linen;
+}
+input {
+    width: 200px;
+}

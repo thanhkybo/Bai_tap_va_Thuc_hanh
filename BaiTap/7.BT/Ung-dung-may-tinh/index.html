@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng máy tính</title>
+    <style>
+        body {
+            background: antiquewhite;
+        }
+        h1 {
+            font-size: larger ;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+  <input type="text" id="text1">
+  <input type="text" id="text2">
+<br><br>
+    <button onclick="tong()">Addition (+)</button>
+    <button onclick="tong2()">Subtraction (-)</button>
+    <button onclick="tong3()">Mutiplication (X)</button>
+    <button onclick="tong4()">Division (/)</button>
+<h1 id="result"></h1>
+  <script>
+      function input (number) {
+          document.getElementById('text1').value += number;
+          document.getElementById('text2').value += number;
+      }
+      function tong() {
+          let text1 = +document.getElementById('text1').value;
+          let text2 = +document.getElementById('text2').value;
+          let tong = eval(text1 + text2);
+          document.getElementById("result").innerText = "Addition :" + tong;
+      }
+      function tong2() {
+          let text1 = +document.getElementById('text1').value;
+          let text2 = +document.getElementById('text2').value;
+          let tong = eval(text1 - text2);
+          document.getElementById("result").innerText = "Subtraction :" + tong;
+      }
+      function tong3() {
+          let text1 = +document.getElementById('text1').value;
+          let text2 = +document.getElementById('text2').value;
+          let tong = eval(text1 * text2);
+          document.getElementById("result").innerText = "Mutiplication :" + tong;
+      }
+      function tong4() {
+          let text1 = +document.getElementById('text1').value;
+          let text2 = +document.getElementById('text2').value;
+          let tong = eval(text1 / text2);
+          document.getElementById("result").innerText = "Division :" + tong;
+      }
+  </script>
+</body>
+</html>
