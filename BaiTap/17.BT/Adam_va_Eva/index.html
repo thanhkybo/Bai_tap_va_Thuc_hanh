@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/Apple.js"></script>
+    <script src="js/Human.js"></script>
+</head>
+<body>
+Tao: <p id="apple-weight"></p>
+Adam: <p id="adam-weight"></p>
+Eva: <p id="eva-weight"></p>
+<button onclick="eatApple('adam')">Adam eat</button>
+<button onclick="eatApple('eva')">Eva eat</button>
+<script>
+    let adam = new Human('adam', true, 100)
+    let eva = new Human('eva', false, 60)
+    let apple = new Apple()
+    document.getElementById('apple-weight').innerHTML = apple.getWeight()
+    document.getElementById('adam-weight').innerHTML = adam.getWeight()
+    document.getElementById('eva-weight').innerHTML = eva.getWeight()
+
+    function eatApple(name) {
+        if (apple.isEmpty()) {
+            alert('Tao het')
+        } else {
+            if (name == 'adam') {
+                adam.eat(apple)
+            } else {
+                eva.eat(apple)
+            }
+
+            document.getElementById('apple-weight').innerHTML = apple.getWeight()
+            document.getElementById('adam-weight').innerHTML = adam.getWeight()
+            document.getElementById('eva-weight').innerHTML = eva.getWeight()
+        }
+    }
+</script>
+</body>
+</html>
