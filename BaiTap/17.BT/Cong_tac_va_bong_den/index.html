@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/SwitchButton.js"></script>
+    <script src="js/ElectricLamp.js"></script>
+</head>
+<body>
+<script>
+    let button = new SwitchButton(),
+        lam = new ElectricLamp()
+
+    button.connectToLamp(lam)
+
+    for (let i = 0;i < 5; i++) {
+    button.switchOn()
+    button.switchOff()
+    }
+</script>
+</body>
+</html>
