@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tạo hàm nhận vào hai tham số. Nếu giá trị của tham số thứ nhất lớn hơn tham số thứ hai, hiển thị hộp thoại thông báo cho người dùng.
+    Nếu giá trị của tham số thứ nhất nhỏ hơn hoặc bằng tham số thứ hai, trả về tổng của hai tham số.</title>
+</head>
+<body>
+<script>
+  function tinhtong(a,b) {
+    if (a > b) {
+      alert("Giá trị a > b xin nhập lại")
+      return
+    }
+    return a + b
+  }
+
+    let a = Number(prompt("Nhập số a"))
+    let b = Number(prompt("Nhập số b"))
+    document.write("Tổng của "+a+" + "+b+" = "+tinhtong(a,b))
+</script>
+</body>
+</html>
